@@ -4,6 +4,9 @@ FROM ghcr.io/maplibre/martin:latest
 COPY goteborg.pmtiles /data/goteborg.pmtiles
 
 ENV PORT=3000
+
+# Martin-imagen har ENTRYPOINT; nollställ den så att CMD blir vårt skal
+ENTRYPOINT []
 EXPOSE 3000
 
 # Render routes traffic to $PORT
